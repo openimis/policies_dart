@@ -1,0 +1,246 @@
+{
+  "@@locale": "de",
+  "appName": "OpenIMIS",
+  "release": "OpenIMIS Version 1.0",
+
+  "home": "Home",
+  "@home": {
+    "description": "home"
+  },
+  "welcome": "Willkommen",
+  "@welcome": {
+    "description": "welcome"
+  },
+  "successfull": "Erfolgreich",
+  "@successfull": {
+    "description": "successfull"
+  },
+  "failed": "Nicht erfolgreich",
+  "@failed": {
+    "description": "failed"
+  },
+  "language": "Sprache",
+  "@language": {
+    "description": "language"
+  },
+  "feedback": "Feedback",
+  "@feedback": {
+    "description": "feedback"
+  },
+  "login": "Einloggen",
+  "@login": {
+    "description": "Action login"
+  },
+  "logout": "Ausloggen",
+  "@logout": {
+    "description": "Action logout"
+  },
+  "save": "Speichern",
+  "@save": {
+    "description": "Action save"
+  },
+  "check": "Prüfen",
+  "@check": {
+    "description": "Action check"
+  },
+  "addFamilyMember": "Mitglied hinzufügen",
+  "@addFamilyMember": {
+    "description": "Action addFamilyMember"
+  },
+  "searchInsuree": "Versicherten Suchen",
+  "@searchInsuree": {
+    "description": "Action search"
+  },
+  "delete": "Löschen",
+  "@delete": {
+    "description": "Action delete"
+  },
+  "edit": "Bearbeiten",
+  "@edit": {
+    "description": "Action edit"
+  },
+  "covered": "Versichert",
+  "@covered": {
+    "description": "Action covered"
+  },
+  "notCovered": "Nicht versichert",
+  "@notCovered": {
+    "description": "Sign notCovered"
+  },
+  "person": "Person",
+  "@person": {
+    "description": "Person"
+  },
+  "options": "Optionen",
+  "@options": {
+    "description": "options"
+  },
+  "addInsuree": "Versicherten hinzufügen",
+  "@addInsuree": {
+    "description": "Action addInsuree"
+  },
+  "insuree": "Versicherte(r)",
+  "@insuree": {
+    "description": "Action insuree"
+  },
+  "isInsured": "Ist versichert",
+  "@isInsured": {
+    "description": "Label followed by an icon signing the insurance status of an insuree"
+  },
+  "family": "Familie",
+  "@family": {
+    "description": "Action family"
+  },
+  "familyMember": "Familienmitglieder",
+  "@familyMember": {
+    "description": "Action familyMember"
+  },
+  "familyHead": "Hauptversicherter",
+  "@familyHead": {
+    "description": "familyHead"
+  },
+  "user": "Benutzer",
+  "@user": {
+    "description": "Property user"
+  },
+  "loginFieldsMissing": "Bitte alle Felder ausfüllen",
+  "@loginFieldsMissing": {
+    "description": "loginFieldsMissing"
+  },
+  "password": "Passwort",
+  "@password": {
+    "description": "Property password"
+  },
+  "eligibility": "Anspruchsberechtigung",
+  "@eligibility": {
+    "description": "Property eligibility"
+  },
+  "genderMale": "Männlich",
+  "@genderMale": {
+    "description": "Property genderMale"
+  },
+  "genderFemale": "Weiblich",
+  "@genderFemale": {
+    "description": "Property genderFemale"
+  },
+  "id": "Nr.",
+  "@id": {
+    "description": "Property id"
+  },
+  "gender": "Geschlecht",
+  "@gender": {
+    "description": "Property gender"
+  },
+  "firstName": "Vorname",
+  "@firstName": {
+    "description": "Property first name"
+  },
+  "lastName": "Nachname",
+  "@lastName": {
+    "description": "Property last name"
+  },
+  "birthDate": "Geburtstag",
+  "@birthDate": {
+    "description": "Property date of birth"
+  },
+  "city": "Stadt",
+  "@city": {
+    "description": "Property city"
+  },
+  "state": "Staat",
+  "@state": {
+    "description": "Property state"
+  },
+  "district": "Bezirk",
+  "@district": {
+    "description": "Property district"
+  },
+  "noResults": "Keine Ergebnisse gefunden",
+  "@noResults": {
+    "description": "Property noResults"
+  },
+  "country": "Land",
+  "@country": {
+    "description": "Property country"
+  },
+  "details": "Details",
+  "@details": {
+    "description": "Property details"
+  },
+  "address": "Adresse",
+  "@address": {
+    "description": "Property address"
+    },
+  "addedToQueue": "Keine Internetverbindung. Versicherter erfolgreich lokal gespeichert.",
+  "@addedToQueue": {
+    "description": "addedToQueue"
+  },
+  "insureeId": "Versicherten ID",
+  "@insureeId": {
+    "description": "Property insureeId"
+  },
+  "noResults": "Keine Ergebnisse gefunden",
+  "@noResults": {
+    "description": "Property noResults"
+  },
+  "country": "Land",
+  "@country": {
+    "description": "Property country"
+  },
+  "details": "Details",
+  "@details": {
+    "description": "Property details"
+  },
+  "address": "Adresse",
+  "@address": {
+    "description": "Property address"
+  },
+  "policy": "Policen",
+  "@policy": {
+    "description": "Policy"
+  },
+  "familyList": "Familienliste",
+  "@familyList": {
+    "description": "Property familyList"
+  },
+  "back": "Zurück",
+  "@back": {
+    "description": "Property back"
+  },
+  "next": "Weiter",
+  "@next": {
+    "description": "Property next"
+  },
+  "dataNotAvailable": "Daten nicht verfügbar",
+  "@dataNotAvailable": {
+    "description": "Error message for no data"
+  },
+  "contributions": "Beitragzahlungen",
+  "@contributions": {
+    "description": "contributions"
+  },
+  "contractor": "Vertragsinhaber",
+  "@contractor": {
+    "description": "contractor"
+  },
+  "partOfFamily": "Mitglied von Familie",
+  "@partOfFamily": {
+    "description": "Property partOfFamily"
+  },
+  "goToFamily": "Zur Familie",
+  "@goToFamily": {
+    "description": "navigator"
+  },
+  "selectedFamily": "Ausgewählte Familie",
+  "@selectedFamily": {
+    "description": "Property selectedFamily"
+  },
+  "page": "Seite",
+  "@page": {
+    "description": "Property page"
+  },
+  "searchText": "Name oder VersichertenID",
+  "@searchText": {
+    "description": "Property searchText"
+  }
+}

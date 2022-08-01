@@ -1,0 +1,11 @@
+{
+  "name": "InsuranceItem",
+  "element": {
+    "category": "CodeableConcept",
+    "name": "String",
+    "description": "String",
+    "productOrService": "CodeableConcept",
+    "excluded": "Boolean",
+    "benefit": "List(BackboneElement)"
+  }
+}

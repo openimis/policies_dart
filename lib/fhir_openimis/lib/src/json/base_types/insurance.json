@@ -1,0 +1,8 @@
+{
+  "name": "Insurance",
+  "element": {
+    "coverage": "Reference",
+    "benefitPeriod": "Period",
+    "item": "List(InsuranceItem)"
+  }
+}

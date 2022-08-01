@@ -1,0 +1,147 @@
+/*
+ * Example that show how to
+ * - Login to openIMIS
+ * - and to retrieve supported Resources, Locations and Organizations
+ *
+ * dependencies:
+ *   http: ^0.13.4
+ *   fhir: ^0.6.2
+ */
+
+import 'dart:convert';
+
+import 'package:fhir/r4.dart';
+import 'package:http/http.dart';
+
+Uri url(
+    {String scheme = "https",
+    String server = "release.openimis.org",
+    String path = "/api/api_fhir_r4",
+    String resource = ""}) {
+  return Uri(scheme: scheme, host: server, path: "$path/$resource");
+}
+
+/// Login to openIMIS using [username] and [password].
+/// Returned HTTP-Header must be used for subsequent requests as it contains
+/// the retrieved bearer token.
+Future<Map<String, String>> login(String username, String password) async {
+  final Map<String, String> headers = {'Content-Type': 'application/json'};
+  final String authStr = '{"username":"$username","password":"$password"}';
+  final Response response =
+      await post(url(resource: "login/"), headers: headers, body: authStr);
+  if (response.statusCode == 200) {
+    final Map<String, dynamic> data = json.decode(response.body);
+    headers["Authorization"] = "Bearer ${data['token']}";
+    return headers;
+  } else {
+    // successful login has statusCode: 200; wrong user/password: 401
+    // but other statusCode could be returned too!
+    throw Exception("Login error: ${response.statusCode}");
+  }
+}
+
+/// Returns names of all existing FHIR resources supported by this server.
+/// HTTP request [header] retrieved from login must be supplied.
+Future<Set<String>> getRessourceNames(var headers) async {
+  return get(url(resource: ""), headers: headers)
+      .then((resp) => json.decode(resp.body).keys.toSet());
+}
+
+Future<List<Organization>> getOrganizations(var headers) async {
+  return getResources(headers, "Organization").then(
+      (orgs) => orgs.map((entry) => entry.resource as Organization).toList());
+}
+
+Future<List<Location>> getLocations(var headers) async {
+  return getResources(headers, "Location")
+      .then((locs) => locs.map((entry) => entry.resource as Location).toList());
+}
+
+Future<Location> getLocation(var headers, String id) async {
+  return get(url(resource: "Location/$id"), headers: headers)
+      .then((resp) => Location.fromJson(json.decode(resp.body)));
+}
+
+Future<Organization> getOrganization(var headers, String id) async {
+  return get(url(resource: "Organization/$id"), headers: headers)
+      .then((resp) => Organization.fromJson(json.decode(resp.body)));
+}
+
+Future<List<BundleEntry>> getResources(headers, resourceName) async {
+  final Response resp =
+      await get(url(resource: "$resourceName/"), headers: headers);
+  final Map<String, dynamic> bundleMap = json.decode(resp.body);
+  final Bundle firstBundle = Bundle.fromJson(bundleMap);
+
+  final List<BundleEntry> result = [];
+  firstBundle.entry?.forEach((l) => result.add(l));
+
+  String? next = getLinkToNextPage(firstBundle);
+  while (next != null) {
+    // fix returned URLs, they use http instead of https
+    next = Uri.decodeFull(next).replaceAll("http:", "https:");
+    final Response resp = await get(Uri.parse(next), headers: headers);
+    if (resp.statusCode != 200) {
+      print("Error retrieving next page: $next -> ${resp.statusCode}");
+      next = null;
+    } else {
+      final Map<String, dynamic> bundleMap = json.decode(resp.body);
+      Bundle bundle = Bundle.fromJson(bundleMap);
+      bundle.entry?.forEach((l) => result.add(l));
+      next = getLinkToNextPage(bundle);
+    }
+  }
+
+  print(
+      "Bundle announced ${firstBundle.total} elements, delivered was: ${countResourceTypes(result)}");
+  return result;
+}
+
+String? getLinkToNextPage(Bundle bundle) {
+  String? next = bundle.link
+      ?.firstWhere((element) => element.relation == "next",
+          orElse: () => BundleLink())
+      .url
+      ?.toString();
+  return next;
+}
+
+Map<R4ResourceType, int> countResourceTypes(List<BundleEntry> entries) {
+  final Map<R4ResourceType, int> type2count = {};
+  entries
+      .map((element) => element.resource?.resourceType)
+      .toList()
+      .forEach((e) {
+    type2count[e!] = (type2count[e] ?? 0) + 1;
+  });
+  return type2count;
+}
+
+void _retrieveSomeDataFromFhirEndpoints(Map<String, String> headers) {
+  getRessourceNames(headers).then(print);
+
+  getOrganizations(headers).then((orgs) => {
+        for (var org in orgs)
+          {
+            print(
+                "Organization: ${org.id} ${org.name} ==> ${org.extension_?.map((e) => e.valueCodeableConcept?.coding?.map((f) => f.display)).toList()}")
+          }
+      });
+
+  getLocations(headers).then((locs) => {
+        for (var loc in locs)
+          {
+            print(
+                "Location: ${loc.id} ${loc.name} ==> ${loc.physicalType?.coding?.map((f) => f.display).toList()}")
+          }
+      });
+
+  getLocation(headers, "23DAF5DE-6B73-497A-AE7C-C90E57DD4E53").then(print);
+  getOrganization(headers, "3E3B103A-07F3-4DA3-9127-D35BD577C0C7").then(print);
+}
+
+Future<void> main(List<String> arguments) async {
+  login("Admin", "admin123")
+      .then((headers) => _retrieveSomeDataFromFhirEndpoints(headers))
+      .catchError(print);
+}

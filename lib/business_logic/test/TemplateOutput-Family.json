@@ -1,0 +1,93 @@
+{
+  "typ": "family",
+  "internal-id": "7E3DCDD4-4851-4021-AC24-579809B76F45",
+  "id": "180000002",
+  "data": {
+    "address": {
+      "id": null,
+      "state": "Ultha",
+      "district": "Rapta",
+      "city": "Jobla"
+    },
+    "head": {
+      "typ": "person",
+      "internal-id": "36F7D9AE-782F-4665-9B47-09F8050DCEEF",
+      "id": "180000002",
+      "data": {
+        "familyName": "Lewis",
+        "givenName": "Tetra",
+        "isHead": "true",
+        "gender": "male",
+        "birthDate": "1979-08-26"
+      },
+      "relation": {
+        "family": {
+          "id": "7E3DCDD4-4851-4021-AC24-579809B76F45",
+          "data": {
+            "address": {
+              "id": null,
+              "state": "Ultha",
+              "district": "Rapta",
+              "city": "Jobla"
+            }
+          }
+        }
+      }
+    },
+    "members": [
+      {
+        "typ": "person",
+        "internal-id": "6B1C49D3-5FB5-431C-8CB2-94FD951C2EB0",
+        "id": "180000001",
+        "data": {
+          "familyName": "Tetra",
+          "givenName": "Alon",
+          "isHead": "false",
+          "gender": "male",
+          "birthDate": "1989-08-13"
+        },
+        "relation": {
+          "family": {
+            "id": "7E3DCDD4-4851-4021-AC24-579809B76F45",
+            "data": {
+              "address": {
+                "id": null,
+                "state": "Ultha",
+                "district": "Rapta",
+                "city": "Jobla"
+              }
+            }
+          }
+        }
+      },
+      {
+        "typ": "person",
+        "internal-id": "50AD27A7-0944-4373-991A-E6A097D2FC6A",
+        "id": "180000003",
+        "data": {
+          "familyName": "Tetra",
+          "givenName": "Zeal",
+          "isHead": "false",
+          "gender": "female",
+          "birthDate": "2009-02-12"
+        },
+        "relation": {
+          "family": {
+            "id": "7E3DCDD4-4851-4021-AC24-579809B76F45",
+            "data": {
+              "address": {
+                "id": null,
+                "state": "Ultha",
+                "district": "Rapta",
+                "city": "Jobla"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "meta": {
+    "fetch-time": "2022-07-03 23:48:37.456362"
+  }
+}

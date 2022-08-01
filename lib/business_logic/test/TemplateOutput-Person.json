@@ -1,0 +1,25 @@
+{
+  "typ": "person",
+  "internal-id": "36F7D9AE-782F-4665-9B47-09F8050DCEEF",
+  "id": "180000002",
+  "data": {
+    "familyName": "Lewis",
+    "givenName": "Tetra",
+    "isHead": "true",
+    "gender": "male",
+    "birthDate": "1979-08-26"
+  },
+  "relation": {
+    "family": {
+      "id": "7E3DCDD4-4851-4021-AC24-579809B76F45",
+      "data": {
+        "address": {
+          "id": null,
+          "state": "Ultha",
+          "district": "Rapta",
+          "city": "Jobla"
+        }
+      }
+    }
+  }
+}

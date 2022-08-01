@@ -1,0 +1,24 @@
+name: fhir_openimis
+description: A package serving special FHIR types to work with an OpenIMIS backend
+version: 1.0.1
+homepage: https://git.informatik.hs-mannheim.de/openimis/openimis
+publish_to: none
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+
+dependencies:
+  http: ^0.13.4
+  freezed_annotation: ^1.1.0
+  json_annotation: ^4.5.0
+
+dev_dependencies:
+  lints: ^1.0.0
+  test: ^1.21.0
+  build_runner: ^2.1.11
+  freezed: ^1.1.1
+  json_serializable: ^6.2.0
+  fhir_generator:
+    git:
+      url: https://github.com/Lightningstream/fhir_generator.git
+      ref: main

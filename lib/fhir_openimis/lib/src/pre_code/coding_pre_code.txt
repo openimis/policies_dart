@@ -1,0 +1,20 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+import '{BUILD_PATH}/base_types/base_types.dart';
+import '{BUILD_PATH}/abstracts/abstracts.dart';
+import '{FILE_NAME_CODE}.dart';
+
+//THIS FILE IS AUTO GENERATED! DO NOT EDIT! 
+
+part '{FILE_NAME}.freezed.dart';
+part '{FILE_NAME}.g.dart';
+
+@freezed
+class {RESOURCE_NAME} with _${RESOURCE_NAME} {
+  factory {RESOURCE_NAME}({
+    @Default(FhirUri.asConst("{DEFAULT_SYSTEM}", ConstUri("{DEFAULT_SYSTEM}"),true)) FhirUri system,
+    required {CODE_SYSTEM_TYPE} code,
+  }) = _{RESOURCE_NAME};
+
+  factory {RESOURCE_NAME}.fromJson(Map<String, dynamic> json) =>
+      _${RESOURCE_NAME}FromJson(json);
+}

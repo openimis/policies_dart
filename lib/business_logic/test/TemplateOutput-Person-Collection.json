@@ -1,0 +1,265 @@
+{
+  "collection": [
+    {
+      "typ": "person",
+      "internal-id": "8EDDA54D-9F04-4E69-93A8-CCF5E0C565FF",
+      "id": "111111117",
+      "data": {
+        "familyName": "Manth",
+        "givenName": "Aby",
+        "isHead": "false",
+        "gender": "female",
+        "birthDate": "2001-05-17"
+      },
+      "relation": {
+        "family": {
+          "id": "4861EC70-1A08-4E00-9F29-643A3E3E8257",
+          "data": {
+            "address": {
+              "id": null,
+              "state": "Ultha",
+              "district": "Rapta",
+              "city": "Rachla"
+            }
+          }
+        }
+      }
+    },
+    {
+      "typ": "person",
+      "internal-id": "1F3DCE3B-EB99-43A0-9172-312119C03EF2",
+      "id": "111111118",
+      "data": {
+        "familyName": "Manth",
+        "givenName": "Rennie",
+        "isHead": "false",
+        "gender": "female",
+        "birthDate": "1976-04-23"
+      },
+      "relation": {
+        "family": {
+          "id": "4861EC70-1A08-4E00-9F29-643A3E3E8257",
+          "data": {
+            "address": {
+              "id": null,
+              "state": "Ultha",
+              "district": "Rapta",
+              "city": "Rachla"
+            }
+          }
+        }
+      }
+    },
+    {
+      "typ": "person",
+      "internal-id": "FD47CB92-8A5E-441B-943E-ED0BDE21C1F5",
+      "id": "111111119",
+      "data": {
+        "familyName": "Manth",
+        "givenName": "Roger",
+        "isHead": "true",
+        "gender": "male",
+        "birthDate": "1970-01-04"
+      },
+      "relation": {
+        "family": {
+          "id": "4861EC70-1A08-4E00-9F29-643A3E3E8257",
+          "data": {
+            "address": {
+              "id": null,
+              "state": "Ultha",
+              "district": "Rapta",
+              "city": "Rachla"
+            }
+          }
+        }
+      }
+    },
+    {
+      "typ": "person",
+      "internal-id": "044CE90F-C1EE-4C17-9819-33D7CB912391",
+      "id": "111111116",
+      "data": {
+        "familyName": "Manth",
+        "givenName": "Gayle",
+        "isHead": "false",
+        "gender": "male",
+        "birthDate": "1953-05-12"
+      },
+      "relation": {
+        "family": {
+          "id": "4861EC70-1A08-4E00-9F29-643A3E3E8257",
+          "data": {
+            "address": {
+              "id": null,
+              "state": "Ultha",
+              "district": "Rapta",
+              "city": "Rachla"
+            }
+          }
+        }
+      }
+    },
+    {
+      "typ": "person",
+      "internal-id": "B8372FAF-06F8-4E4E-8168-15F3192F7E7E",
+      "id": "111111114",
+      "data": {
+        "familyName": "Manth",
+        "givenName": "Ramy",
+        "isHead": "false",
+        "gender": "female",
+        "birthDate": "2009-09-25"
+      },
+      "relation": {
+        "family": {
+          "id": "4861EC70-1A08-4E00-9F29-643A3E3E8257",
+          "data": {
+            "address": {
+              "id": null,
+              "state": "Ultha",
+              "district": "Rapta",
+              "city": "Rachla"
+            }
+          }
+        }
+      }
+    },
+    {
+      "typ": "person",
+      "internal-id": "7F5B5FB4-8D16-48D8-857E-F1F019006F07",
+      "id": "111111115",
+      "data": {
+        "familyName": "Manth",
+        "givenName": "Gabbie",
+        "isHead": "false",
+        "gender": "female",
+        "birthDate": "1980-08-17"
+      },
+      "relation": {
+        "family": {
+          "id": "4861EC70-1A08-4E00-9F29-643A3E3E8257",
+          "data": {
+            "address": {
+              "id": null,
+              "state": "Ultha",
+              "district": "Rapta",
+              "city": "Rachla"
+            }
+          }
+        }
+      }
+    },
+    {
+      "typ": "person",
+      "internal-id": "EE2E986E-E0BC-4B94-AF7D-CB6C407CF328",
+      "id": "070707070",
+      "data": {
+        "familyName": "Macintyre",
+        "givenName": "Joseph",
+        "isHead": "true",
+        "gender": "male",
+        "birthDate": "1950-07-12"
+      },
+      "relation": {
+        "family": {
+          "id": "71E65954-0B2D-4F5D-A28D-F2E2EC468D5A",
+          "data": {
+            "address": {
+              "id": null,
+              "state": "Ultha",
+              "district": "Rapta",
+              "city": "Rachla"
+            }
+          }
+        }
+      }
+    },
+    {
+      "typ": "person",
+      "internal-id": "C609B66B-B253-4715-96DC-3D2BD2BC33F7",
+      "id": "070707055",
+      "data": {
+        "familyName": "Macintyre",
+        "givenName": "Jet",
+        "isHead": "false",
+        "gender": "female",
+        "birthDate": "2005-10-16"
+      },
+      "relation": {
+        "family": {
+          "id": "71E65954-0B2D-4F5D-A28D-F2E2EC468D5A",
+          "data": {
+            "address": {
+              "id": null,
+              "state": "Ultha",
+              "district": "Rapta",
+              "city": "Rachla"
+            }
+          }
+        }
+      }
+    },
+    {
+      "typ": "person",
+      "internal-id": "E8283622-F86C-4A76-A2A4-3A335E0D7E0B",
+      "id": "070707066",
+      "data": {
+        "familyName": "Macintyre",
+        "givenName": "Abu",
+        "isHead": "false",
+        "gender": "male",
+        "birthDate": "1973-11-21"
+      },
+      "relation": {
+        "family": {
+          "id": "71E65954-0B2D-4F5D-A28D-F2E2EC468D5A",
+          "data": {
+            "address": {
+              "id": null,
+              "state": "Ultha",
+              "district": "Rapta",
+              "city": "Rachla"
+            }
+          }
+        }
+      }
+    },
+    {
+      "typ": "person",
+      "internal-id": "9D1F8B7E-FE52-4B68-9338-7BC32092E79D",
+      "id": "070707081",
+      "data": {
+        "familyName": "Macintyre",
+        "givenName": "Jane",
+        "isHead": "false",
+        "gender": "female",
+        "birthDate": "1952-05-07"
+      },
+      "relation": {
+        "family": {
+          "id": "71E65954-0B2D-4F5D-A28D-F2E2EC468D5A",
+          "data": {
+            "address": {
+              "id": null,
+              "state": "Ultha",
+              "district": "Rapta",
+              "city": "Rachla"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "count": "10",
+      "args": "",
+      "pages": 1,
+      "page": 1,
+      "next": "",
+      "previous": ""
+    },
+    "fetch-time": "2022-07-03 23:49:23.834569"
+  }
+}
